@@ -111,23 +111,7 @@ class Chart extends StatelessWidget {
             );
           })
         ],
-        //   children: [
-        //     ...(recentTransactions[index]['amount'].map((e) {
-        //       return Column(
-        //         children: [
-        //           Text(
-        //             "₹",
-        //             style: TextStyle(fontSize: 20, color: Colors.white),
-        //           ),
-        //           Container(
-        //               //margin: EdgeInsets.only(top:0,left: 15,right: 15,bottom:0 ),
-
-        //               ),
-        //           Text("M", style: Theme.of(context).textTheme.headline1),
-        //         ],
-        //       );
-        //     })),
-        //   ],
+       
       ),
     );
   }
