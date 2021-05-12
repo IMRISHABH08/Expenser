@@ -1,4 +1,4 @@
-# second_app
+# EXpenser
 
 A new Flutter project.
 
