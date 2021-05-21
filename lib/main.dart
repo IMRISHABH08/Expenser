@@ -1,21 +1,9 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
-// import 'package:flutter/services.dart';
-//import 'package:intl/intl.dart';
-//import 'package:second_app/widgets/chart.dart';
-//import 'package:second_app/widgets/new_transaction.dart';
+
 import './widgets/transaction_list.dart';
-//import './widgets/user_Transactions.dart';
-
 import './widgets/new_transaction.dart';
-
-//import 'package:intl/intl.dart';.dart';
-
 import './widgets/chart.dart';
-
-//import 'dart:io';
-
 import 'models/transaction.dart';
 
 void main() {
@@ -86,7 +74,9 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   // double _totalSum7 = 0;
 
-/* //USING FOR LOOP FILTERING THE OLD LIST
+/* 
+
+// USING FOR LOOP FILTERING THE OLD LIST //
 
   List<Transaction> get recentTransaction {
     final weekDay = DateTime.now().subtract(Duration(days: 7));
@@ -134,8 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   final List<Transaction> _userTransactions = [
-    // Transaction(date: DateTime.now(), amount: 700, id: "t1", title: "Shoes"),
-    // Transaction(date: DateTime.now(), amount: 500, id: "t2", title: "Mouse"),
+   
   ];
 
   void _addTransaction(String txTitle, double txAmount, DateTime pickedDate) {
@@ -174,8 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
     bool isLandscap = mediaquery.orientation == Orientation.landscape;
 
     return Scaffold(
-        // backgroundColor: Colors.blue[100],{}
-        //resizeToAvoidBottomInset: false,
+        
         floatingActionButton: Platform.isIOS
             ? Container()
             : FloatingActionButton(
@@ -208,11 +196,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     onChanged: (newValue) {
                       setState(() {
                         Switch_Change = newValue;
-                        // Switch_Change = !Switch_Change;
-                        // if (Switch_Change == true)
-                        //   Switch_Change = false;
-                        // else
-                        //   Switch_Change = true;
+                      
                       });
                     },
                   ),
@@ -249,10 +233,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 bottomLeft: Radius.circular(25),
                                 bottomRight: Radius.circular(25),
                               ),
-                              //     image: DecorationImage(
-                              //         image: AssetImage(
-                              //             "assets/images/wallpaper2you_55590.jpg"),
-                              //         fit: BoxFit.cover),
+                             
                             ),
                           ),
                           Column(
@@ -375,240 +356,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       0.6,
                   child: TransactionList(_userTransactions, delete: delete)),
 
-            // Card(
-            //   margin: EdgeInsets.only(
-            //     bottom: 15,
-            //     left: 5,
-            //     right: 5,
-            //     top: 10,
-            //   ),
-            //   elevation: 20,
-            //   child: Container(
-            //       height: 100,
-            //       width: double.infinity,
-            //       margin: EdgeInsets.all(5),
-            //       color: Colors.green,
-            //       alignment: Alignment.center,
-            //       child: Row(
-            //         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            //         children: [
-            // Column(
-            //   children: [
-            //     Text(
-            //       "₹",
-            //       style: TextStyle(fontSize: 20, color: Colors.white),
-            //     ),
-            //     Container(
-            //       //margin: EdgeInsets.only(top:0,left: 15,right: 15,bottom:0 ),
-            //       width: 20,
-            //       height: 52,
-            //       decoration: BoxDecoration(
-            //         border: Border.all(
-            //           color: Colors.white,
-            //           width: 2,
-            //         ),
-            //       ),
-            //     ),
-            //     Text("M",
-            //         style: Theme.of(context).textTheme.headline1),
-            //   ],
-            // ),
-            // Column(
-            //   children: [
-            //     Text(
-            //       "₹",
-            //       style: TextStyle(fontSize: 20, color: Colors.white),
-            //     ),
-            //     Container(
-            //       //margin: EdgeInsets.only(top:0,left: 15,right: 15,bottom:0 ),
-            //       width: 20,
-            //       height: 52,
-            //       decoration: BoxDecoration(
-            //           border:
-            //               Border.all(color: Colors.white, width: 2)),
-            //     ),
-            //     Text("T",
-            //         style: Theme.of(context).textTheme.headline1),
-            //   ],
-            // ),
-            // Column(
-            //   children: [
-            //     Text(
-            //       "₹",
-            //       style: TextStyle(fontSize: 20, color: Colors.white),
-            //     ),
-            //     Container(
-            //       // margin: EdgeInsets.only(top:0,left: 10,right: 10,bottom:0 ),
-            //       width: 20,
-            //       height: 52,
-            //       decoration: BoxDecoration(
-            //           border:
-            //               Border.all(color: Colors.white, width: 2)),
-            //     ),
-            //     Text("W",
-            //         style: Theme.of(context).textTheme.headline1),
-            //   ],
-            // ),
-            // Column(
-            //   children: [
-            //     Text(
-            //       "₹",
-            //       style: TextStyle(fontSize: 20, color: Colors.white),
-            //     ),
-            //     Container(
-            //       //margin: EdgeInsets.only(top:0,left: 10,right: 10,bottom:0 ),
-            //       width: 20,
-            //       height: 52,
-            //       decoration: BoxDecoration(
-            //           border:
-            //               Border.all(color: Colors.white, width: 2)),
-            //     ),
-            //     Text("T",
-            //         style: Theme.of(context).textTheme.headline1),
-            //   ],
-            // ),
-            // Column(
-            //   children: [
-            //     Text(
-            //       "₹",
-            //       style: TextStyle(fontSize: 20, color: Colors.white),
-            //     ),
-            //     Container(
-            //       //margin: EdgeInsets.only(top:0,left: 10,right:10,bottom:0 ),
-            //       width: 20,
-            //       height: 52,
-            //       decoration: BoxDecoration(
-            //           border:
-            //               Border.all(color: Colors.white, width: 2)),
-            //     ),
-            //     Text("F",
-            //         style: Theme.of(context).textTheme.headline1),
-            //   ],
-            // ),
-            // Column(
-            //   children: [
-            //     Text(
-            //       "₹",
-            //       style: TextStyle(fontSize: 20, color: Colors.white),
-            //     ),
-            //     Container(
-            //       // margin: EdgeInsets.only(top:0,left: 10,right: 10,bottom:0 ),
-            //       width: 20,
-            //       height: 52,
-            //       decoration: BoxDecoration(
-            //           border:
-            //               Border.all(color: Colors.white, width: 2)),
-            //     ),
-            //     Text("S",
-            //         style: Theme.of(context).textTheme.headline1),
-            //   ],
-            // ),
-            // Column(
-            //   children: [
-            //     Text(
-            //       "₹",
-            //       style: TextStyle(fontSize: 20, color: Colors.white),
-            //     ),
-            //     Container(
-            //       //margin: EdgeInsets.only(top:0,left: 8,right: 8,bottom:0 ),
-            //       width: 20,
-            //       height: 52,
-            //       decoration: BoxDecoration(
-            //         border: Border.all(color: Colors.white, width: 2),
-            //       ),
-            //     ),
-            //     Text("S",
-            //         style: Theme.of(context).textTheme.headline1),
-            //   ],
-            // ),
+           
           ],
         )
-        // Text(
-        //   "CHART",
-        //   style: TextStyle(
-        //     color: Colors.white,
-        //     fontWeight: FontWeight.bold,
-        //   ),
-        // ),
-        //       ),
-        // ),
-
-        //UserTransactions(),
-
+        
         );
 
-    // Column(
-    //   children: <Widget>[
-    //     ...(transaction.map(
-    //       (e) {
-    //         return Card(
-    //           child: Row(
-    //             children: <Widget>[
-    //               Container(
-    //                 height: 50,
-    //                 width: 50,
-    //                 margin: EdgeInsets.only(
-    //                   left: 10,
-    //                   right: 10,
-    //                   top: 5,
-    //                   bottom: 5,
-    //                 ),
-    //                 alignment: Alignment.center,
-    //                 decoration: BoxDecoration(
-    //                   borderRadius: BorderRadius.circular(5),
-    //                   border: Border.all(
-    //                     color: Colors.black26,
-    //                     width: 2,
-    //                   ),
-    //                   color: Colors.redAccent,
-    //                 ),
-    //                 child: Text(
-    //                   //  "\$"+e.amount.toString(),
-    //                   //  r"$"+e.amount.toString(),
-    //                   "${e.amount} \₹",
-    //                   style: TextStyle(
-    //             // color: Colors.redAccent,
-    //                         fontWeight: FontWeight.bold,
-    //                     color: Colors.white,
-    //                   ),
-    //                 ),
-    //               ),
-    //               Column(
-    //                 crossAxisAlignment: CrossAxisAlignment.start,
-    //                 children: <Widget>[
-    //                   Text(
-    //                     e.title,
-    //                     style: TextStyle(
-    //                         fontWeight: FontWeight.bold, fontSize: 20),
-    //                   ),
-    //                   Text(DateFormat.yMMMMd().format(e.date),
-    //                       style:
-    //                           TextStyle(color: Colors.grey, fontSize: 15))
-    //                 ],
-    //               )
-    //             ],
-    //           ),
-    //         );
-    //       },
-    //     )).toList(),
-    //   ],
-    // )
-  }
+      }
 }
 
-// class MyHomePage extends StatelessWidget {
-// var name;
-// var price;
-
-// final nameController = TextEditingController();
-// final priceController = TextEditingController();
-// final List<Transaction> transaction = [
-//   Transaction(date: DateTime.now(), amount: 700, id: "t1", title: "Shoes"),
-//   Transaction(date: DateTime.now(), amount: 500, id: "t2", title: "Mouse"),
-// ];
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return ;
-//   }
-// }
